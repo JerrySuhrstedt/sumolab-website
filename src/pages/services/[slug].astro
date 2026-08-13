@@ -16,7 +16,7 @@ export function getStaticPaths() {
 
 const { service } = Astro.props;
 
-const structuredData = {
+const serviceSchema = {
 	"@context": "https://schema.org",
 	"@type": "Service",
 	name: service.name,
@@ -31,6 +31,21 @@ const structuredData = {
 		name: `${city.name}, ${city.state}`,
 	})),
 };
+
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: service.faqs.map((faq) => ({
+		"@type": "Question",
+		name: faq.question,
+		acceptedAnswer: {
+			"@type": "Answer",
+			text: faq.answer,
+		},
+	})),
+};
+
+const structuredData = [serviceSchema, faqSchema];
 ---
 
 <Layout title={`${service.name} | SumoLab`} description={service.tagline} structuredData={structuredData}>

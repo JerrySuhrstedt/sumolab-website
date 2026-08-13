@@ -29,7 +29,7 @@ const nearbyCities = city.nearby.map((name) => cities.find((c) => c.name === nam
 const title = `${service.name} in ${city.name}, ${city.state} | SumoLab`;
 const description = `${service.name} for established ${city.name}, ${city.state} businesses ready to scale, without the full-time cost.`;
 
-const structuredData = {
+const serviceSchema = {
 	"@context": "https://schema.org",
 	"@type": "Service",
 	name: `${service.name} in ${city.name}, ${city.state}`,
@@ -44,6 +44,21 @@ const structuredData = {
 		name: `${city.name}, ${city.state}`,
 	},
 };
+
+const faqSchema = {
+	"@context": "https://schema.org",
+	"@type": "FAQPage",
+	mainEntity: faqs.map((faq) => ({
+		"@type": "Question",
+		name: faq.question,
+		acceptedAnswer: {
+			"@type": "Answer",
+			text: faq.answer,
+		},
+	})),
+};
+
+const structuredData = [serviceSchema, faqSchema];
 ---
 
 <Layout title={title} description={description} structuredData={structuredData}>
