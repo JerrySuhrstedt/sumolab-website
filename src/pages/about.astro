@@ -4,11 +4,31 @@ import Section from "../components/Section.astro";
 import Eyebrow from "../components/Eyebrow.astro";
 import PrimaryCTA from "../components/PrimaryCTA.astro";
 import { founder } from "../data/founder";
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "AboutPage",
+	name: "About | SumoLab",
+	url: "https://sumolab.co/about/",
+	mainEntity: {
+		"@type": "Person",
+		name: founder.name,
+		jobTitle: founder.title,
+		description: founder.bio,
+		image: founder.headshotSrc ? `https://sumolab.co${founder.headshotSrc}` : undefined,
+		worksFor: {
+			"@type": "Organization",
+			name: "SumoLab",
+			url: "https://sumolab.co",
+		},
+	},
+};
 ---
 
 <Layout
 	title="About | SumoLab"
 	description="Most AI advice comes from people who've never had to make payroll. Mine comes from 28 years of building and running businesses, and going deep on AI."
+	structuredData={structuredData}
 >
 	<main>
 		<section class="relative isolate overflow-hidden">

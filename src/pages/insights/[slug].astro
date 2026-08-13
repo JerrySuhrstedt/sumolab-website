@@ -21,9 +21,42 @@ const publishedDate = new Date(insight.publishedAt).toLocaleDateString("en-US", 
 	day: "numeric",
 	timeZone: "UTC",
 });
+
+function truncate(text: string, max: number) {
+	if (text.length <= max) return text;
+	const cut = text.slice(0, max);
+	return `${cut.slice(0, cut.lastIndexOf(" "))}...`;
+}
+
+const suffix = " | SumoLab Insights";
+const pageTitle =
+	insight.title.length + suffix.length <= 60 ? `${insight.title}${suffix}` : truncate(insight.title, 60);
+const metaDescription = truncate(insight.excerpt, 155);
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: insight.title,
+	description: insight.excerpt,
+	image: `https://sumolab.co${insight.imageSrc}`,
+	datePublished: insight.publishedAt,
+	author: {
+		"@type": "Person",
+		name: founder.name,
+	},
+	publisher: {
+		"@type": "Organization",
+		name: "SumoLab",
+		url: "https://sumolab.co",
+	},
+	mainEntityOfPage: {
+		"@type": "WebPage",
+		"@id": `https://sumolab.co/insights/${insight.slug}/`,
+	},
+};
 ---
 
-<Layout title={`${insight.title} | SumoLab Insights`} description={insight.excerpt}>
+<Layout title={pageTitle} description={metaDescription} structuredData={structuredData}>
 	<main>
 		<section class="relative isolate overflow-hidden">
 			<img src={insight.imageSrc} alt="" class="absolute inset-0 h-full w-full object-cover" />

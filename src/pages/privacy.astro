@@ -2,11 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import Eyebrow from "../components/Eyebrow.astro";
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebPage",
+	name: "Privacy Policy | SumoLab",
+	url: "https://sumolab.co/privacy/",
+};
 ---
 
 <Layout
 	title="Privacy Policy | SumoLab"
 	description="SumoLab's privacy policy, covering how information submitted through this site is collected and used."
+	structuredData={structuredData}
 >
 	<main>
 		<Section tone="offwhite" class="pt-14 pb-16 md:pt-20">

@@ -4,6 +4,7 @@ import Section from "../../components/Section.astro";
 import Eyebrow from "../../components/Eyebrow.astro";
 import PrimaryCTA from "../../components/PrimaryCTA.astro";
 import { caseStudies } from "../../data/case-studies";
+import { founder } from "../../data/founder";
 
 export function getStaticPaths() {
 	return caseStudies.map((caseStudy) => ({
@@ -13,9 +14,41 @@ export function getStaticPaths() {
 }
 
 const { caseStudy } = Astro.props;
+
+function truncate(text: string, max: number) {
+	if (text.length <= max) return text;
+	const cut = text.slice(0, max);
+	return `${cut.slice(0, cut.lastIndexOf(" "))}...`;
+}
+
+const suffix = " | SumoLab Case Studies";
+const pageTitle =
+	caseStudy.title.length + suffix.length <= 60 ? `${caseStudy.title}${suffix}` : truncate(caseStudy.title, 60);
+const metaDescription = truncate(caseStudy.summary, 155);
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "Article",
+	headline: caseStudy.title,
+	description: caseStudy.summary,
+	about: caseStudy.client,
+	author: {
+		"@type": "Person",
+		name: founder.name,
+	},
+	publisher: {
+		"@type": "Organization",
+		name: "SumoLab",
+		url: "https://sumolab.co",
+	},
+	mainEntityOfPage: {
+		"@type": "WebPage",
+		"@id": `https://sumolab.co/case-studies/${caseStudy.slug}/`,
+	},
+};
 ---
 
-<Layout title={`${caseStudy.title} | SumoLab Case Studies`} description={caseStudy.summary}>
+<Layout title={pageTitle} description={metaDescription} structuredData={structuredData}>
 	<main>
 		<Section tone="offwhite" class="pt-14 pb-16 md:pt-20">
 			<Eyebrow>Case Study &middot; {caseStudy.client}</Eyebrow>

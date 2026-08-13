@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Section from "../components/Section.astro";
 import Eyebrow from "../components/Eyebrow.astro";
+import { contact } from "../data/contact";
 
 const callCovers = [
 	"Where your marketing stands today, and where the gaps are",
@@ -9,11 +10,26 @@ const callCovers = [
 	"What an engagement would actually look like for your business",
 	"A straight answer on fit, in either direction",
 ];
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "ContactPage",
+	name: "Book a Strategy Call | SumoLab",
+	url: "https://sumolab.co/contact/",
+	about: {
+		"@type": "Organization",
+		name: "SumoLab",
+		url: "https://sumolab.co",
+		telephone: contact.phoneHref ?? undefined,
+		email: contact.email ?? undefined,
+	},
+};
 ---
 
 <Layout
 	title="Book a Strategy Call | SumoLab"
 	description="Schedule a strategy call with SumoLab. Tell us about your business and we'll follow up to discuss whether senior marketing leadership is the right fit."
+	structuredData={structuredData}
 >
 	<main>
 		<Section tone="offwhite" class="pt-14 pb-16 md:pt-20">
