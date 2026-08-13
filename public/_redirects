@@ -57,6 +57,121 @@
 /what-really-is-a-crm/ /insights/what-really-is-a-crm/ 301
 /why-salesforce-is-the-1-crm/ /insights/why-salesforce-is-the-1-crm/ 301
 
+# More company/legal pages found still indexed by Google after the rebrand
+# (confirmed live via a "site:sumolab.co" search) — were 404ing.
+/our-team/ /about/ 301
+/category/company/ /about/ 301
+/contact-us/ /contact/ 301
+/privacy-policy/ /privacy/ 301
+
+# Old "Marketing Strategy Consulting" standalone service (base + city
+# variants + duplicate /services/ and /services__trashed/ prefixes the old
+# site accumulated) — closest current equivalent is Fractional Marketing
+# Director, including its city pages.
+/marketing-strategy-consulting/ /services/fractional-marketing-director/ 301
+/services/marketing-strategy-consulting/ /services/fractional-marketing-director/ 301
+/services__trashed/marketing-strategy-consulting/ /services/fractional-marketing-director/ 301
+/marketing-strategy-consulting-chandler-az/ /services/fractional-marketing-director/chandler/ 301
+/marketing-strategy-consulting-gilbert-az/ /services/fractional-marketing-director/gilbert/ 301
+/marketing-strategy-consulting-mesa-az/ /services/fractional-marketing-director/mesa/ 301
+/marketing-strategy-consulting-phoenix-az/ /services/fractional-marketing-director/phoenix/ 301
+/marketing-strategy-consulting-scottsdale-az/ /services/fractional-marketing-director/scottsdale/ 301
+/marketing-strategy-consulting-tempe-az/ /services/fractional-marketing-director/tempe/ 301
+/services/marketing-strategy-consulting-chandler-az/ /services/fractional-marketing-director/chandler/ 301
+/services/marketing-strategy-consulting-gilbert-az/ /services/fractional-marketing-director/gilbert/ 301
+/services/marketing-strategy-consulting-mesa-az/ /services/fractional-marketing-director/mesa/ 301
+/services/marketing-strategy-consulting-phoenix-az/ /services/fractional-marketing-director/phoenix/ 301
+/services/marketing-strategy-consulting-scottsdale-az/ /services/fractional-marketing-director/scottsdale/ 301
+/services/marketing-strategy-consulting-tempe-az/ /services/fractional-marketing-director/tempe/ 301
+/services__trashed/marketing-strategy-consulting-chandler-az/ /services/fractional-marketing-director/chandler/ 301
+/services__trashed/marketing-strategy-consulting-gilbert-az/ /services/fractional-marketing-director/gilbert/ 301
+/services__trashed/marketing-strategy-consulting-mesa-az/ /services/fractional-marketing-director/mesa/ 301
+/services__trashed/marketing-strategy-consulting-phoenix-az/ /services/fractional-marketing-director/phoenix/ 301
+/services__trashed/marketing-strategy-consulting-scottsdale-az/ /services/fractional-marketing-director/scottsdale/ 301
+/services__trashed/marketing-strategy-consulting-tempe-az/ /services/fractional-marketing-director/tempe/ 301
+
+# Old "Marketing Automation" standalone service — closest current fit is the
+# AI Advisor (systems/automation is one of its core threads).
+/marketing-automation/ /services/fractional-ai-advisor/ 301
+/services/marketing-automation/ /services/fractional-ai-advisor/ 301
+/services__trashed/marketing-automation/ /services/fractional-ai-advisor/ 301
+/marketing-automation-chandler-az/ /services/fractional-ai-advisor/chandler/ 301
+/marketing-automation-gilbert-az/ /services/fractional-ai-advisor/gilbert/ 301
+/marketing-automation-mesa-az/ /services/fractional-ai-advisor/mesa/ 301
+/marketing-automation-phoenix-az/ /services/fractional-ai-advisor/phoenix/ 301
+/marketing-automation-scottsdale-az/ /services/fractional-ai-advisor/scottsdale/ 301
+/marketing-automation-tempe-az/ /services/fractional-ai-advisor/tempe/ 301
+/services/marketing-automation-chandler-az/ /services/fractional-ai-advisor/chandler/ 301
+/services/marketing-automation-gilbert-az/ /services/fractional-ai-advisor/gilbert/ 301
+/services/marketing-automation-mesa-az/ /services/fractional-ai-advisor/mesa/ 301
+/services/marketing-automation-phoenix-az/ /services/fractional-ai-advisor/phoenix/ 301
+/services/marketing-automation-scottsdale-az/ /services/fractional-ai-advisor/scottsdale/ 301
+/services/marketing-automation-tempe-az/ /services/fractional-ai-advisor/tempe/ 301
+/services__trashed/marketing-automation-chandler-az/ /services/fractional-ai-advisor/chandler/ 301
+/services__trashed/marketing-automation-gilbert-az/ /services/fractional-ai-advisor/gilbert/ 301
+/services__trashed/marketing-automation-mesa-az/ /services/fractional-ai-advisor/mesa/ 301
+/services__trashed/marketing-automation-phoenix-az/ /services/fractional-ai-advisor/phoenix/ 301
+/services__trashed/marketing-automation-scottsdale-az/ /services/fractional-ai-advisor/scottsdale/ 301
+/services__trashed/marketing-automation-tempe-az/ /services/fractional-ai-advisor/tempe/ 301
+
+# Old "Web Design & Development" and "Podcast Production" service lines —
+# no current equivalent at all (not part of the business anymore), so these
+# go to the services hub rather than a specific service page.
+/web-design-development-az/ /services/ 301
+/web-design-development-chandler-az/ /services/ 301
+/web-design-development-gilbert-az/ /services/ 301
+/web-design-development-mesa-az/ /services/ 301
+/web-design-development-phoenix-az/ /services/ 301
+/web-design-development-scottsdale-az/ /services/ 301
+/web-design-development-tempe-az/ /services/ 301
+/services/web-design-development-az/ /services/ 301
+/services/web-design-development-chandler-az/ /services/ 301
+/services/web-design-development-gilbert-az/ /services/ 301
+/services/web-design-development-mesa-az/ /services/ 301
+/services/web-design-development-phoenix-az/ /services/ 301
+/services/web-design-development-scottsdale-az/ /services/ 301
+/services/web-design-development-tempe-az/ /services/ 301
+/services__trashed/web-design-development-az/ /services/ 301
+/services__trashed/web-design-development-chandler-az/ /services/ 301
+/services__trashed/web-design-development-mesa-az/ /services/ 301
+/services__trashed/web-design-development-phoenix-az/ /services/ 301
+/services__trashed/web-design-development-scottsdale-az/ /services/ 301
+/services__trashed/web-design-development-tempe-az/ /services/ 301
+/podcast-production/ /services/ 301
+/podcast-production-chandler-az/ /services/ 301
+/podcast-production-gilbert-az/ /services/ 301
+/podcast-production-mesa-az/ /services/ 301
+/podcast-production-phoenix-az/ /services/ 301
+/podcast-production-scottsdale-az/ /services/ 301
+/podcast-production-tempe-az/ /services/ 301
+/services/podcast-production/ /services/ 301
+/services/podcast-production-chandler-az/ /services/ 301
+/services/podcast-production-gilbert-az/ /services/ 301
+/services/podcast-production-mesa-az/ /services/ 301
+/services/podcast-production-phoenix-az/ /services/ 301
+/services/podcast-production-scottsdale-az/ /services/ 301
+/services/podcast-production-tempe-az/ /services/ 301
+/services__trashed/podcast-production/ /services/ 301
+/services__trashed/podcast-production-chandler-az/ /services/ 301
+/services__trashed/podcast-production-gilbert-az/ /services/ 301
+/services__trashed/podcast-production-mesa-az/ /services/ 301
+/services__trashed/podcast-production-phoenix-az/ /services/ 301
+/services__trashed/podcast-production-scottsdale-az/ /services/ 301
+/services__trashed/podcast-production-tempe-az/ /services/ 301
+
+# Old standalone Salesforce consulting service pages (distinct from the
+# Salesforce blog posts, which already redirect above) — no current
+# equivalent as a standalone offering.
+/salesforce-consulting/ / 301
+/salesforce-cost-analysis/ / 301
+/salesforce-eco-system-how-to-get-started/ / 301
+/salesforce-consulting-partners-how-do-they-work/ / 301
+
+# Old pricing pages — no public pricing page on the new site; send to Contact.
+/pricing/ /contact/ 301
+/pricing-2/ /contact/ 301
+/marketing-pricing/ /contact/ 301
+
 # Legacy pages with no current equivalent (campaign landers, thank-you pages,
 # and one bogus post) — send to the homepage rather than 404, to preserve
 # any residual link equity.
